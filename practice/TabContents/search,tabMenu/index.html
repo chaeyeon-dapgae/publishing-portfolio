@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Section Testimonial</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <div class="heading">
+      <h1>안녕하세요 신입 퍼블리셔 유채연입니다</h1>
+      <input type="text" placeholder="What are you looking for?">
+    </div>
+    <div class="tab-inner">
+      <ul class="btn">
+        <li data-alt="tab1" class="active">HTML5</li>
+        <li data-alt="tab2">CSS3</li>
+        <li data-alt="tab3">JAVASCRIPT</li>
+        <li data-alt="tab4">CSS FRAMEWORKS</li>
+      </ul>
+      <div class="tabs">
+        <div id="tab1" class="active">
+          <h3>HTML5</h3>
+          <div class="content">
+            <img src="" alt="">
+            <div class="texts">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque veniam explicabo quis, possimus pariatur delectus esse! Obcaecati dolorum similique, vero necessitatibus quisquam qui incidunt suscipit corrupti iure ratione dolore fugit, facere quia ea unde. Quis esse temporibus quas atque voluptatibus possimus rerum qui minus, veniam repudiandae harum molestiae iusto perspiciatis hic mollitia officia deserunt corrupti sed! Illo possimus, excepturi nostrum dolorem magni ipsam. Sed esse sunt incidunt debitis quisquam ex. 
+            </div>
+          </div>
+        </div>
+        <div id="tab2">
+          <h3>CSS3</h3>
+          <div class="content">
+            <img src="" alt="">
+            <div class="texts">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque veniam explicabo quis, possimus pariatur delectus esse! Obcaecati dolorum similique, vero necessitatibus quisquam qui incidunt suscipit corrupti iure ratione dolore fugit, facere quia ea unde. Quis esse temporibus quas atque voluptatibus possimus rerum qui minus, veniam repudiandae harum molestiae iusto perspiciatis hic mollitia officia deserunt corrupti sed! Illo possimus, excepturi nostrum dolorem magni ipsam. Sed esse sunt incidunt debitis quisquam ex. 
+            </div>
+          </div>
+        </div>
+        <div id="tab3">
+          <h3>JAVASCRIPT</h3>
+          <div class="content">
+            <img src="" alt="">
+            <div class="texts">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque veniam explicabo quis, possimus pariatur delectus esse! Obcaecati dolorum similique, vero necessitatibus quisquam qui incidunt suscipit corrupti iure ratione dolore fugit, facere quia ea unde. Quis esse temporibus quas atque voluptatibus possimus rerum qui minus, veniam repudiandae harum molestiae iusto perspiciatis hic mollitia officia deserunt corrupti sed! Illo possimus, excepturi nostrum dolorem magni ipsam. Sed esse sunt incidunt debitis quisquam ex. 
+            </div>
+          </div>
+        </div>
+        <div id="tab4">
+          <h3>CSS FRAMEWORKS</h3>
+          <div class="content">
+            <img src="" alt="">
+            <div class="texts">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque veniam explicabo quis, possimus pariatur delectus esse! Obcaecati dolorum similique, vero necessitatibus quisquam qui incidunt suscipit corrupti iure ratione dolore fugit, facere quia ea unde. Quis esse temporibus quas atque voluptatibus possimus rerum qui minus, veniam repudiandae harum molestiae iusto perspiciatis hic mollitia officia deserunt corrupti sed! Illo possimus, excepturi nostrum dolorem magni ipsam. Sed esse sunt incidunt debitis quisquam ex. 
+            </div>
+          </div>
+        </div>
+        <div id="tab5">
+          <h3>HTML5</h3>
+          <div class="content">
+            <img src="" alt="">
+            <div class="texts">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque veniam explicabo quis, possimus pariatur delectus esse! Obcaecati dolorum similique, vero necessitatibus quisquam qui incidunt suscipit corrupti iure ratione dolore fugit, facere quia ea unde. Quis esse temporibus quas atque voluptatibus possimus rerum qui minus, veniam repudiandae harum molestiae iusto perspiciatis hic mollitia officia deserunt corrupti sed! Illo possimus, excepturi nostrum dolorem magni ipsam. Sed esse sunt incidunt debitis quisquam ex. 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    $('.btn li').click(function(){
+      $(this).siblings().removeClass('active');
+      $(this).addClass('active');
+      var tab = $(this).attr('data-alt');
+      $('#' + tab).siblings().removeClass('active');
+      $('#' + tab).addClass('active');
+    })
+  </script>
+</body>
+</html>

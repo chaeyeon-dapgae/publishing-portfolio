@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  background-color: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+/* Common */
+.tabContents {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  width: 90%;
+  flex-wrap: wrap;
+}
+.content {
+  width: calc(50% - 40px);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+input {
+  display: none;
+}
+.tabView {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.tabGroup {
+  position: absolute;
+  overflow: hidden;
+  width: 300%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.35s;
+  display: flex;
+}
+.tab {
+  width: calc(100% / 3);
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+}
+.tab img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.tab .text {}
+.tab .text p {
+  margin: 0;
+}
+.tab .text .info {}
+.tab .text .info h5 {
+  margin: 0;
+}
+.tab .text .info p {}
+.tab .text .info p span {}
+.btn {
+  text-align: center;
+  margin-top: 20px;
+}
+.btn label {
+  display: inline-block;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid teal;
+  margin: 0 10px;
+  cursor: pointer;
+}
+/* ##### Right To Left ##### */
+input[id="cnt01-btn1"]:checked ~ .btn label[for="cnt01-btn1"],
+input[id="cnt01-btn2"]:checked ~ .btn label[for="cnt01-btn2"],
+input[id="cnt01-btn3"]:checked ~ .btn label[for="cnt01-btn3"] {
+  background-color: teal;
+  border-radius: 0;
+  transform: rotate(45deg);
+}
+input[id="cnt01-btn1"]:checked ~ .tabInner .tabGroup {
+  left: 0;
+}
+input[id="cnt01-btn2"]:checked ~ .tabInner .tabGroup {
+  left: -100%;
+}
+input[id="cnt01-btn3"]:checked ~ .tabInner .tabGroup {
+  left: -200%;
+}
+/* ##### Bottom To Top ##### */
+input[id="cnt02-btn1"]:checked ~ .btn label[for="cnt02-btn1"],
+input[id="cnt02-btn2"]:checked ~ .btn label[for="cnt02-btn2"],
+input[id="cnt02-btn3"]:checked ~ .btn label[for="cnt02-btn3"] {
+  background-color: teal;
+  border-radius: 0;
+  transform: rotate(45deg);
+}
+.cnt02 .tabGroup {
+  width: 100%;
+  height: 300%;
+  flex-direction: column;
+}
+.cnt02 .tab {
+  width: 100%;
+  height: calc(100% / 3);
+}
+input[id="cnt02-btn1"]:checked ~ .tabInner .tabGroup {
+  top: 0;
+}
+input[id="cnt02-btn2"]:checked ~ .tabInner .tabGroup {
+  top: -100%;
+}
+input[id="cnt02-btn3"]:checked ~ .tabInner .tabGroup {
+  top: -200%;
+}
+@media (max-width: 1199px) {
+  body {
+    height: auto;
+    padding: 50px 0;
+  }
+}
+@media (max-width: 767px) {
+  .content {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

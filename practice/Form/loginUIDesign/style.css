@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #eee;
+  line-height: 1.5em;
+  font-size: 15px;
+  color: #222;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+.container header {
+  border-bottom: 1px solid lightgray;
+  background-color: #fff;
+  height: 60px;
+  text-align: center;
+  position: relative;
+}
+.container header a {
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 900;
+  border: 1px solid #000;
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+.container section {
+  height: calc(100vh - 60px);
+  width: 100vw;
+  position: relative;
+}
+.login {
+  width: 360px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login-type h1 {
+  margin: 0;
+  font-size: 38px;
+  line-height: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.btn,
+.or-text {
+  display: block;
+  text-align: center;
+}
+.btn {
+  border: 1px solid lightgray;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.7;
+}
+.btn:hover {
+  opacity: 1;
+}
+.btn:nth-of-type(1) {
+  background-color: #fff;
+  color: #222;
+}
+.btn:nth-of-type(2) {
+  background-color: #898c9b;
+}
+.btn:nth-of-type(3) {
+  background-color: #11ce00;
+}
+.btn:nth-of-type(4) {
+  background-color: #f7d700;
+  color: #222;
+}
+.btn:nth-of-type(5) {
+  background-color: #0076fe;
+}
+.login-type span {
+  position: relative;
+}
+.login-type span:before,
+.login-type span:after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  background-color: gray;
+  width: calc(50% - 30px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.login-type span:before {
+  left: 0;
+}
+.login-type span:after {
+  right: 0;
+}
+.login-footer {
+  overflow: hidden;
+  padding: 5px 0;
+}
+.login-footer input,
+.login-footer label {
+  cursor: pointer;
+}
+.login-footer p {
+  float: right;
+  margin: 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+.login-footer p a {
+  font-weight: bold;
+}
+.login-footer p:hover a {
+  text-decoration: underline;
+}
+@media (max-width: 1199px) {
+  .container section {
+    padding: 30px 0;
+    height: auto;
+  }
+  .login {
+    width: 70%;
+    position: static;
+    transform: translate(0);
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .login-type h1 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .login {
+    width: 90%;
+  }
+  .login-footer p {
+    float: none;
+  }
+}

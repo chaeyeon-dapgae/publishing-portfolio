@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #333;
+  line-height: 1.5em;
+  background: linear-gradient(120deg, #a1c4fd, #c2e9fb) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.member {
+  width: 900px;
+  border-collapse: collapse;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.member caption {
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: teal;
+  line-height: 1.3em;
+}
+.member tr {
+  border-bottom: 1px solid #eee;
+  transition: 0.35s;
+}
+.member tr:last-child {
+  border-bottom: none;
+}
+.member th,
+.member td {
+  padding: 12px;
+  text-align: center;
+}
+.member tr th {
+  background: linear-gradient(0, #a1c4fd, #c2e9fb);
+  color: #fff;
+}
+.member tr th:first-child {
+  border-radius: 10px 0 0 0;
+}
+.member tr th:last-child {
+  border-radius: 0 10px 0 0;
+}
+.member tr:last-child td:first-child {
+  border-radius: 0 0 0 10px;
+}
+.member tr:last-child td:last-child {
+  border-radius: 0 0 10px 0;
+}
+.member tr td:last-child {
+  color: dodgerblue;
+}
+.member tr td:last-child {
+  color: dodgerblue;
+}
+/* .member tr:nth-child(2n+1) {
+  background-color: #f4f4f4;
+} */
+.member tr:nth-child(odd) {
+  background-color: #f4f4f4;
+}
+.member tr:nth-child(even) {
+  background-color: #fff;
+}
+@media (max-width: 1199px) {
+  .member {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    display: block;
+    padding-top: 50px;
+  }
+  .member {
+    /* overflow-x: scroll; */
+    display: block;
+    width: 100%;
+    box-shadow: none;
+  }
+  .member caption {
+    width: 100%;
+    display: block;
+  }
+  .member tbody {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+  .member tr {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+  }
+  .member tr th {
+  }
+  .member tr th,
+  .member tr td {
+    padding: 12px 0;
+  }
+  .member tr th:nth-child(2),
+  .member tr th:nth-child(4),
+  .member tr th:nth-child(5) {
+    width: 30%;
+  }
+  .member tr th:nth-child(1),
+  .member tr th:nth-child(3) {
+    width: calc(30% / 2);
+  }
+  .member tr td:nth-child(2),
+  .member tr td:nth-child(4),
+  .member tr td:nth-child(5) {
+    width: 30%;
+  }
+  .member tr td:nth-child(1),
+  .member tr td:nth-child(3) {
+    width: calc(30% / 2);
+  }
+}

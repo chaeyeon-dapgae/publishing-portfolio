@@ -1,0 +1,54 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+body {
+  line-height: 1.5em;
+  margin: 0;
+  font-weight: 300;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+.gnb {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.gnb a {
+  width: 80px;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.gnb a:before,
+.gnb a:after {
+  content: attr(data-link);
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  transition: 0.35s;
+}
+.gnb a:before {
+  top: 0;
+  left: 0;
+}
+.gnb a:after {
+  top: 100%;
+  left: 0;
+  color: #45b649;
+}
+.gnb a:hover:before {
+  top: -100%;
+}
+.gnb a:hover:after {
+  top: 0;
+}

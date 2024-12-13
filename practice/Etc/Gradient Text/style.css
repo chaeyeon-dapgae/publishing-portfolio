@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Noto+Sans+KR:wght@300;500;900&family=Noto+Sans:wght@300;500;900&display=swap');
+body {
+  margin: 0;
+  font-family: 'Agbalumo', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222;
+}
+.heading {
+  font-size: 8em;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 0;
+  /* background-color: #4158d0; */
+  background: linear-gradient(45deg, red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  position: relative;
+}
+.heading:before {
+  content: 'amor fati';
+  text-shadow: 40px 20px 2px rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+div {
+  border: 20px dashed #000;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  background-color: red;
+  background-clip: padding-box;
+  display: none;
+}
+@media (max-width: 1199px) {
+  body {
+    box-sizing: border-box;
+  }
+  .heading {
+    font-size: 6em;
+  }
+}
+@media (max-width: 767px) {
+  .heading {
+    padding: 10px;
+    font-size: 3.5em;
+  }
+  .heading:before {
+    text-shadow: 20px 10px 2px rgba(0, 0, 0, 0.8);
+  }
+}

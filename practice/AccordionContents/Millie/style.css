@@ -1,0 +1,88 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+* {box-sizing: border-box;
+}
+body {
+  margin: 0;
+  line-height: 1.6em;
+  font-weight: 300;
+  font-size: 20px;
+  background-color: #ffeb60;
+  height: 100vh;
+}
+.faq {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.faq-inner {
+  width: 750px;
+  margin: 0 auto;
+}
+.faq-inner h1 {
+  text-align: center;
+}
+.accordion-item {
+  background-color: #fff;
+  margin-bottom: 16px;
+  border-radius: 30px;
+  padding: 15px 25px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.accordion-item .title {
+  font-weight: bold;
+  cursor: pointer;
+}
+.accordion-item .title.active {
+  padding-bottom: 15px;
+}
+.accordion-item .title:after {
+  content: '\f107';
+  font-family: fontawesome;
+  float: right;
+  margin-top: 4px;
+  transition: 0.5s;
+}
+.accordion-item .title.active:after {
+  transform: rotateX(180deg);
+}
+.accordion-item .content {
+  border-top: 1px solid #000;
+  font-size: 16px;
+  padding-top: 15px;
+  display: none;
+}
+@media (max-width: 1199px) {
+  body {
+    height: auto;
+  }
+  .faq {
+    padding: 75px 0;
+    position: static;
+    transform: translate(0, 0);
+    width: 70%;
+    margin: 0 auto;
+  }
+  .faq-inner {
+    width: 100%;
+  }
+  .accordion-item .title {
+    padding-right: 30px;
+    position: relative;
+  }
+  .accordion-item .title:after {
+    float: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+  .accordion-item .title.active:after {
+    transform: translateY(-50%) rotateX(180deg);
+  }
+}
+@media (max-width: 767px) {
+  .faq {
+    width: 90%;
+  }
+}

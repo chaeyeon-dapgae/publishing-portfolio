@@ -1,0 +1,72 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #fff;
+}
+/* Blog post grid gallery */
+.container {
+  display: grid;
+  height: 100vh;
+  align-content: center;
+}
+.heading {
+  margin: 0;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  position: relative;
+  line-height: 1.2em;
+  padding: 20px;
+}
+.heading:after {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 4px;
+  background-color: dodgerblue;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+}
+section div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.focus {
+  grid-area: 1 / 1 / 3 / 3;
+}
+/* Hover Effects */
+section div .fa,
+section div span {
+  display: none;
+}
+/* Responsive CSS - layout01*/
+@media (min-width: 768px) and (max-width: 1024px){
+  .container {
+    align-content: start;
+  }
+  section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    align-content: start;
+  }
+  section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .focus {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+}

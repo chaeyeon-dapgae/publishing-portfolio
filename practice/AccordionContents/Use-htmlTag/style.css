@@ -1,0 +1,62 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+* {box-sizing: border-box;}
+body {
+  margin: 0;
+  line-height: 1.5em;
+  font-size: 18px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.html-accordion {
+  width: 700px;
+  margin: 50px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+.html-accordion h1 {
+  margin-top: 0;
+  text-align: center;
+  line-height: 1.4em;
+}
+details {
+  padding: 1em;
+}
+details summary {
+  list-style: none;
+  cursor: pointer;
+}
+details summary:after {
+  content: '\f107';
+  font-family: fontawesome;
+  float: right;
+  transition: 0.5s;
+}
+details[open] summary:after {
+  font-weight: bold;
+  transform: rotateX(180deg);
+}
+.detail-content {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+@media (max-width: 1199px) {
+  body {
+    padding: 50px 0;
+    height: auto;
+  }
+  .html-accordion {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .html-accordion {
+    width: 90%;
+  }
+}

@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #eee;
+}
+.tab-inner {
+  height: 520px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1514);
+}
+.tab-inner h1 {
+  text-align: center;
+  color: crimson;
+}
+input[name=tabmenu] {
+  display: none;
+}
+.tabs {
+  width: 800px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.items {
+  width: 300%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.items div {
+  width: 33.3333%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+.btn {
+  text-align: center;
+  margin-top: 5px;
+}
+.btn label {
+  width: 10px;
+  height: 10px;
+  background-color: lightgray;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+}
+input[id=tab1]:checked ~ .tabs .items {
+  left: 0;
+}
+input[id=tab2]:checked ~ .tabs .items {
+  left: -100%;
+}
+input[id=tab3]:checked ~ .tabs .items {
+  left: -200%;
+}
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3] {
+  border-radius: 0;
+  transform: rotate(45deg);
+}
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab3]:checked ~ .btn label[for=tab3] {
+  background-color: salmon;
+}
+input[id=tab2]:checked ~ .btn label[for=tab2] {
+  background-color: dodgerblue;
+}
+.items div {
+  padding: 50px 70px;
+}
+.items div img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.items div p b {
+  display: block;
+}
+.items div:nth-child(1) p b,
+.items div:nth-child(3) p b{
+  color: salmon;
+}
+.items div:nth-child(2) p b{
+  color: dodgerblue;
+}
+@media (max-width: 1199px) {
+  .tab-inner {
+    height: auto;
+    width: 70%;
+  }
+  .tabs {
+    width: 100%;
+    overflow-y: scroll;
+  }
+  .items div {
+    padding: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .tab-inner {
+    width: 90%;
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>별점 주기</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="star-rating">
+    <div class="stars">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+    </div>
+    <div class="print">
+      별점 부탁드립니다
+    </div>
+  </div>
+  <script>
+    $('.stars .fa').click(function(){
+      $(this).addClass('active');
+      $(this).prevAll().addClass('active');
+      $(this).nextAll().removeClass('active');
+      var num = $(this).index();
+      var starRate = num + 1;
+      $('.print').text(num);
+      if(starRate == 1) {
+        $('.print').text('별로예요')
+      }
+      else if (starRate == 2) {
+        $('.print').text('보통이에요');
+      }
+      else if (starRate == 3) {
+        $('.print').text('그냥 그래요');
+      }
+      else if (starRate == 4) {
+        $('.print').text('만족해요');
+      }
+      else {
+        $('.print').text('아주 좋아요');
+      }
+    })
+  </script>
+</body>
+</html>

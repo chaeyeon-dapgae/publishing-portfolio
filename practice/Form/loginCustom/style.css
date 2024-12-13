@@ -1,0 +1,215 @@
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6em;
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(
+    45deg,
+    rgba(23, 172, 204, 1) 0%,
+    rgba(149, 52, 223, 1) 100%
+  );
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  margin-top: 0;
+}
+/* Custom Checkbox Login box */
+.login {
+  width: 430px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 50px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login h1 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+  line-height: 1.2em;
+}
+.login .field {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 20px;
+  display: block;
+  color: dodgerblue;
+}
+.login input[type="email"],
+.login input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.login input[type="email"]::placeholder,
+.login input[type="password"]::placeholder {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.35s;
+}
+.login input[type="email"]:focus::placeholder,
+.login input[type="password"]:focus::placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+.save-info {
+  margin: 30px 0;
+  text-align: center;
+  overflow: hidden;
+}
+.save-info input[type=checkbox] {
+  float: left;
+  margin-top: 7px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.save-info label {
+  float: left;
+  cursor: pointer;
+}
+.save-info a {
+  float: right;
+  text-transform: capitalize;
+}
+.save-info a:hover {
+  text-decoration: underline;
+}
+.event-info {
+  text-align: center;
+}
+.custom-checkbox {
+  display: block;
+  margin-top: 10px;
+}
+.custom-checkbox input,
+.custom-checkbox label{
+  cursor: pointer;
+}
+.custom-checkbox label:nth-of-type(1){
+  margin-right: 10px;
+}
+input[type=button] {
+  width: 300px;
+  padding: 10px 0;
+  border-radius: 20px;
+  border: none;
+  background-color: skyblue;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.35s;
+}
+input[type=button]:hover {
+  background-color: teal;
+}
+.sns-info {
+  text-align: center;
+  margin-top: 20px;
+}
+.sns {
+  margin-top: 10px 0;
+}
+.sns a i {
+  border-radius: 50%;
+  font-size: 26px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  background-color: red;
+  color: #fff;
+  margin-top: 10px;
+  margin-right: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: 0.35s;
+}
+.sns a:nth-child(1) i {
+  background-color: #DC4234;
+}
+.sns a:nth-child(2) i {
+  background-color: #4164AE;
+}
+.sns a:nth-child(3) i {
+  background-color: #00C13A;
+}
+.sns a:nth-child(4) i {
+  margin-right: 0;
+  background-color: #F7E111;
+}
+.sns a:hover i {
+  transform: rotateY(360deg);
+}
+.signup-info {
+  text-align: center;
+}
+.signup-info span {
+  display: block;
+  margin-top: 30px;
+}
+.signup-info a {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.signup-info a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 1199px) {
+  body {
+    height: auto;
+    padding: 50px 0;
+    background-repeat: no-repeat;
+  }
+  .login {
+    width: 70%;
+    position: static;
+    transform: translate(0);
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .login {
+    width: 90%;
+    padding: 20px;
+  }
+  input[type=button] {
+    width: 100%;
+  }
+}
+@media (max-width: 350px) {
+  .save-info {
+    text-align: left;
+  }
+  .save-info input[type=checkbox] {
+    float: none;
+  }
+  .save-info label {
+    float: none;
+  }
+  .save-info a {
+    float: none;
+    display: block;
+  }
+}

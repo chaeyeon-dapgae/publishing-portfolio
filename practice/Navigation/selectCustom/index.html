@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>푸터 패밀리사이트 셀렉트 커스텀 스타일</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <footer>
+      <div class="footer-inner">
+        <div class="copyright">
+          <div class="policy">
+            <a href="#none">개인정보처리방침</a><em>|</em><a href="#none">사이트맵</a>
+          </div>
+          <div class="info">
+            <span>서울 강서구 xx로 75 5층 (주)chaeyeon</span>
+          </div>
+        </div>
+        <div class="family">
+          <div class="dropdown">
+            <div class="title">Family Site</div>
+            <ul class="sub-navi">
+              <li><a href="#none">Yoo Chaeyeon01</a></li>
+              <li><a href="#none">Yoo Chaeyeon02</a></li>
+              <li><a href="#none">Yoo Chaeyeon03</a></li>
+              <li><a href="#none">Yoo Chaeyeon04</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    $('.title').click(function(){
+      $('.sub-navi').slideToggle()
+      $(this).toggleClass('active')
+    })
+    $('.sub-navi li').click(function(){
+      $(this).parent().slideUp()
+      $('.title').text($(this).text())
+    })
+  </script>
+</body>
+</html>

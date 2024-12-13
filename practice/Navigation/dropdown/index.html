@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Academy 헤더 드롭다운 네비게이션</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="lnb-outer">
+        <div class="lnb">
+          <div class="logo">
+            <a href="#">LOGO</a>
+          </div>
+          <div class="lnb-navi">
+            <a href="#none">Login</a>
+            <a href="#none">Register Membership</a>
+            <a href="#none">Education Gift</a>
+            <a href="#none">Voucher Learning Mail</a>
+            <a href="#none">Customer enter</a>
+          </div>
+        </div>
+      </div>
+      <div class="gnb-outer">
+        <nav>
+          <ul class="gnb">
+            <li>
+              <a href="#none">Take a lecture</a>
+            </li>
+            <li>
+              <a href="#none">Infinite refund course</a>
+              <div class="dropdown">
+                <a href="#none">TOEIC refund Course</a>
+                <a href="#none">Infinite pass</a>
+                <a href="#none">TOEIC speaking pass</a>
+              </div>
+            </li>
+            <li>
+              <a href="#none">Instructor Introduction</a>
+            </li>
+            <li>
+              <a href="#none">Free lecture</a>
+              <div class="dropdown">
+                <a href="#none">TOEIC refund Course</a>
+                <a href="#none">TOEIC</a>
+                <a href="#none">Free special TOEIC lecture</a>
+                <a href="#none">TOEIC 5 minutes in practice</a>
+                <a href="#none">Pronunciation travel</a>
+                <a href="#none">Daily TOEIC VOCA</a>
+                <a href="#none">Speaking Practice</a>
+                <a href="#none">Writing Practice</a>
+              </div>
+            </li>
+            <li>
+              <a href="#none">Event<em>13</em></a>
+              <div class="dropdown">
+                <a href="#none">Event in progress</a>
+                <a href="#none">End Event</a>
+                <a href="#none">Wouter Announcement</a>
+              </div>
+            </li>
+            <li>
+              <a href="#none">Class room</a>
+              <div class="dropdown">
+                <a href="#none">Lecture while taking</a>
+                <a href="#none">Questions / Reviews</a>
+                <a href="#none">Coupon</a>
+                <a href="#none">Course voucher</a>
+                <a href="#none">Payment / Shipping</a>
+                <a href="#none">Level Test</a>
+              </div>
+            </li>
+            <li>
+              <div class="trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <!-- Script -->
+  <script>
+    $('.close-banner').click(function(){
+      $('.banner-outer').slideUp();
+    })
+    $('.trigger').click(function(){
+      $('.trigger, .gnb li:last-child').toggleClass('active')
+    })
+  </script>
+</body>
+</html>

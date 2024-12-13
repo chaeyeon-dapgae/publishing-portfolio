@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <ul class="navi">
+        <li data-image="img/background_landscape02.jpg">
+          <a href="#none" data-text="About">About</a>
+        </li>
+        <li data-image="img/background_landscape03.jpg">
+          <a href="#none" data-text="Instructor">Instructor</a>
+        </li>
+        <li data-image="img/background_landscape04.jpg">
+          <a href="#none" data-text="class">class</a>
+        </li>
+        <li data-image="img/background_landscape05.jpg">
+          <a href="#none" data-text="location">location</a>
+        </li>
+      </ul>
+      <div class="photo"></div>
+    </div>
+    <script>
+      $(".navi li").mouseenter(function () {
+        var changeImage = $(this).attr("data-image");
+        $(".photo").css({
+          'background-image': 'url('+ changeImage +')'
+        });
+      });
+      $(".navi li").mouseleave(function (){
+        $('.photo').css({
+          'background-image': ''
+        })
+      })
+    </script>
+  </body>
+</html>

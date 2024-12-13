@@ -1,0 +1,69 @@
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: gainsboro;
+  background-color: #222;
+  line-height: 1.5em;
+}
+a {
+  text-decoration: none;
+  color: gainsboro;
+}
+/* Netflix Accordion */
+.faq .inner {
+  width: 700px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.faq .inner h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 50px;
+  line-height: 1.5em;
+}
+.faq-title {
+  background-color: #303030;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 3px;
+  transition: 0.35s;
+}
+.faq-title:hover,
+.faq-title.active {
+  background-color: #33495e;
+}
+.faq-title i {
+  float: right;
+  margin-top: 5px;
+  transition: 0.35s;
+}
+.faq-title.active i {
+  transform: rotate(45deg);
+}
+.faq-content {
+  background-color: #303030;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: none;
+}
+@media (max-width: 1199px) {
+  .faq .inner {
+    position: static;
+    transform: translate(0, 0);
+    width: 70%;
+    padding: 50px 0;
+  }
+}
+@media (max-width: 1199px) {
+  .faq .inner {
+    width: 90%;
+  }
+}

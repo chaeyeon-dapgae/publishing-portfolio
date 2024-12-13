@@ -1,0 +1,99 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+* {box-sizing: border-box;}
+body {
+  margin: 0;
+  color: #222;
+  background-color: #eee;
+}
+a{
+  text-decoration: none;
+  color: #222;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+section article {
+  padding:40px 80px;
+  background-color: #fff;
+  width: 980px;
+}
+section article .content {
+  overflow: hidden;
+}
+.content > div {
+  width: 50%;
+  float: left;
+}
+.accordion .title {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+  padding-left: 15px;
+  transition: 0.3s;
+}
+.accordion .title:after {
+  content: '\f105';
+  font-family: fontawesome;
+  float: right;
+  margin-right: 5px;
+  margin-top: 3px;
+  transition: 0.3s;
+}
+.accordion .title:hover,
+.accordion .title.active {
+  background-color: #203049;
+  color: #fff;
+}
+.accordion .title:hover:after,
+.accordion .title.active:after {
+  transform: rotate(90deg);
+  color: orange;
+}
+.accordion .title.active {
+  color: #fff;
+}
+.accordion .desc {
+  padding: 20px;
+  display: none;
+}
+.accordion .desc.active {
+  display: block;
+}
+.img {
+  text-align: center;
+}
+.img img {
+  height: 300px;
+  object-fit: cover;
+}
+@media (max-width: 1199px) {
+  section {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    padding: 50px 0;
+    padding-top: 75px;
+  }
+  section article {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  section article {
+    padding: 20px;
+  }
+  .content > div {
+    width: 100%;
+  }
+  .img {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,213 @@
+@import url("https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+}
+body {
+  margin: 0;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5em;
+  background-color: #333;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+/* ############### Header ############### */
+/* ############### Banner ############### */
+.banner-outer {
+  background-color: navy;
+  position: relative;
+  height: 40px;
+  background: linear-gradient(90deg, #00202b 50%, #fff 50%);
+}
+.banner {
+  width: 1450px;
+  margin: 0 auto;
+}
+.banner img {
+  display: block;
+}
+.close-banner {
+  position: absolute;
+  right: 10px;
+  font-size: 26px;
+  color: #aaa;
+  cursor: pointer;
+  top: 5px;
+}
+/* ############### LNB ############### */
+.lnb-outer {
+  background-color: #e2edf8;
+}
+.lnb {
+  width: 1450px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  height: 120px;
+}
+.lnb .logo {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.lnb .lnb-navi {}
+.lnb .lnb-navi a {}
+.lnb .lnb-navi a:hover {
+  color: dodgerblue;
+}
+.lnb .lnb-navi a:after {
+  content: '|';
+  font-size: 12px;
+  color: #bbb;
+  margin-right: 5px;
+  padding-left: 5px;
+}
+.lnb .lnb-navi a:last-child:after {
+  display: none;
+}
+/* ############### GNB ############### */
+.gnb-outer {
+  background-color: #272c38;
+}
+.gnb-outer nav {
+  width: 1450px;
+  margin: 0 auto;
+}
+.gnb {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+}
+.gnb li {
+  float: left;
+  width: calc((1450px - 50px) / 6);
+  border-right: 1px solid #aaa;
+  height: 50px; text-align: center;
+  position: relative;
+}
+.gnb li:first-child {
+  background-color: crimson;
+}
+.gnb li:last-child {
+  background-color: #12359d;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.gnb li > a {
+  color: #fff;
+  display: block;
+  height: 100%;
+  padding-top: 11px;
+}
+.gnb li em {
+  background-color: crimson;
+  font-size: 12px;
+  font-style: normal;
+  padding: 0 5px;
+  border-radius: 10px;
+}
+/* ##### Trigger ##### */
+.gnb li:last-child.active {
+  background-color: #fff;
+}
+.gnb li:last-child.active span {
+  background-color: #333;
+}
+.trigger {
+  width: 25px;
+  height: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+.trigger span {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.trigger span:nth-child(1) {
+  top: 0;
+}
+.trigger span:nth-child(2) {
+  top: 50%;
+  opacity: 1;
+}
+.trigger span:nth-child(3) {
+  top: 100%;
+}
+.trigger.actice span {
+  background-color: #000;
+  background-color: #333;
+}
+.trigger.active span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.trigger.active span:nth-child(2) {
+  opacity: 0;
+}
+.trigger.active span:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+.dropdown {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+}
+.dropdown a {
+  color: #fff;
+  display: block;
+  padding: 8px;
+  text-align: center;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+.dropdown a:last-child {
+  border-bottom: 0;
+}
+.dropdown a:hover {
+  background-color: #eee;
+}
+/*########## Dropdown function ##########*/
+/* ##### 1 ##### */
+/* .dropdown {
+  display: none;
+}
+.gnb li:hover .dropdown {
+  display: block;
+} */
+/* ##### 2 ##### */
+.dropdown {
+  opacity: 0;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.gnb li:hover .dropdown {
+  opacity: 1;
+  pointer-events: all;
+}
+@media (max-width: 1199px) {
+  .lnb {
+    width: 90%;
+    border: 1px solid #000;
+  }
+  .gnb-outer nav {
+    width: 90%;
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="item">
+    <img src="img/item.jpg" alt="에센셜 후드 스웻 셔츠">
+    <div class="detail">
+      <div class="title">
+        <h2>에센셜 후드 스웻 셔츠<em>(MELANGE GREY)</em> </h2>
+        <span><em>￦</em> 43,000</span>
+      </div>
+      <div class="info">
+        <div class="size">
+          <label>Size</label>
+          <span class="active">S</span>
+          <span>M</span>
+          <span>L</span>
+          <span>XL</span>
+        </div>
+        <div class="color">
+          <label>Colors</label>
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="like"></div>
+      </div>
+      <button class="add-card">Add to Cart</button>
+    </div>
+  </div>
+  <script>
+    $('.size span, .color span').click(function(){
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    })
+    $('.like').click(function(){
+      $('.like').toggleClass('active');
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+* {box-sizing: border-box;}
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6em;
+  font-weight: 300;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: gainsboro;
+}
+/* Netflix Faq with jQuery */
+.faq {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.faq-inner {
+  width: 700px;
+  margin: 0 auto;
+}
+.faq-inner h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+.accordion {
+  font-size: 24px;
+}
+.accordion .title,
+.accordion .content {
+  background-color: #303030;
+  padding: 10px 15px;
+  margin-bottom: 7px;
+}
+.accordion .title {
+  cursor: pointer;
+}
+.accordion .title.active {
+  background-color: #353b48;
+}
+.accordion .title:after {
+  content: '\e9c5';
+  font-family: xeicon;
+  float: right;
+  margin-top: 3px;
+  transition: 0.3s;
+}
+.accordion .title.active:after {
+  transform: rotate(45deg);
+}
+.accordion .content {
+  font-size: 16px;
+  display: none;
+}
+.newsletter {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
+}
+.newsletter div {
+  display: flex;
+}
+.newsletter div input[type=email],
+.newsletter div button {
+  border: none;
+  outline: none;
+  height: 60px;
+  vertical-align: middle;
+}
+.newsletter div input[type=email] {
+  width: 70%;
+  padding-left: 20px;
+}
+.newsletter div button {
+  cursor: pointer;
+  background-color: #e84118;
+  color: #fff;
+  width: 30%;
+}
+.newsletter div button:after {
+  content: '\e93f';
+  font-family: xeicon;
+  font-size: 25px;
+  display: inline-block;
+  transform: translateY(4px);
+}
+@media (max-width: 1199px) {
+  .faq {
+    position: static;
+    transform: translate(0, 0);
+    padding: 50px 0;
+  }
+  .faq-inner {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .faq-inner {
+    width: 90%;
+  }
+  .faq-inner h1 {
+    font-size: 34px;
+  }
+  .accordion .title {
+    padding-right: 30px;
+    position: relative;
+    line-height: 1.4em;
+  }
+  .accordion .title:after {
+    float: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  .accordion .title.active:after {
+    transform: translateY(-50%) rotate(45deg);
+  }
+}

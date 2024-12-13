@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix FAQ</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="faq">
+    <div class="inner">
+      <h1>Frequently Asked Questions</h1>
+      <article class="accordion">
+        <div class="faq-title">What is Netflix?<i class="xi-plus-thin"></i></div>
+        <div class="faq-content">
+          Netflix is a streaming service that offers a wide variety of award-winning TV show, movies, anime, documentaries, and more on thousands of internet-connected devices.
+          <br><br>
+          You can watch as much as you want, whenever you want without a single commercial - all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!
+        </div>
+        <div class="faq-title">How much does Netflix cost?<i class="xi-plus-thin"></i></div>
+        <div class="faq-content">
+          Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from KRW9,500 to KRW14,500 a month. No extra costs, no contracts
+        </div>
+        <div class="faq-title">Where can I watch?<i class="xi-plus-thin"></i></div>
+        <div class="faq-content">
+          Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including mart TVs, smartphones, tablets, streaming media players and game consoles.
+          <br><br>
+          You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.
+        </div>
+        <div class="faq-title">How do I cancel?<i class="xi-plus-thin"></i></div>
+        <div class="faq-content">
+          Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks.. There are no cancellation fees - start or stop your account anytime.
+        </div>
+        <div class="faq-title">What can I watch on Netflix?<i class="xi-plus-thin"></i></div>
+        <div class="faq-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, odio possimus, quis tempora temporibus voluptatibus suscipit voluptas, hic harum culpa voluptates eum adipisci magnam. Aliquam asperiores exercitationem eveniet, explicabo, voluptatum consequuntur et ipsam sint nihil deserunt accusantium porro, a tenetur?
+        </div>
+        <div class="faq-title">Is Netflix good for kids?<i class="xi-plus-thin"></i></div>
+        <div class="faq-content">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, veritatis. Sed minima consectetur animi voluptate molestias labore nihil quibusdam, autem architecto earum doloribus a. Deserunt possimus totam a itaque dolor.
+          <br><br>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit incidunt voluptatibus optio autem voluptate iste pariatur quis veniam. Rem natus doloremque eligendi deserunt. Animi non sit sequi quia.
+        </div>
+      </article>
+    </div>
+  </section>
+  <script>
+    $('.faq-title').eq(0).addClass('active')
+    $('.faq-content').eq(0).show()
+    $('.faq-title').click(function(){
+      $(this).siblings('.faq-title').removeClass('active')
+      $(this).addClass('active')
+      $(this).siblings('.faq-content').slideUp()
+      $(this).next().slideDown()
+    })
+  </script>
+</body>
+</html>

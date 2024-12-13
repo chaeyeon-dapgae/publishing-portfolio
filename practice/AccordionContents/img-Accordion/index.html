@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>어코디언 콘텐츠 슬라이드</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <article>
+      <div class="content">
+        <div class="accordion">
+          <div class="title active" data-image="img/graphic01.png">
+            2023년 멜론뮤직어워드 티켓팅 안내
+          </div>
+          <div class="desc active">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt beatae magnam molestias adipisci aut quia omnis at iure. Commodi, quaerat!
+          </div>
+          <div class="title" data-image="img/graphic02.png">
+            카카오페이 전산 작업에 따른 카카오페이 머니 결제 불가
+          </div>
+          <div class="desc">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi aliquid blanditiis quis earum! Fuga iusto, voluptatum debitis architecto totam impedit aliquid tenetur?
+          </div>
+          <div class="title" data-image="img/graphic03.png">
+            카카오페이 전산 작업에 따른 카카오페이 결제 불가
+          </div>
+          <div class="desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit modi eum soluta aliquid, vitae ad dignissimos quis at?
+          </div>
+          <div class="title" data-image="img/graphic04.png">
+            멜론 PC/모바일 하위버전 PICK송 서비스 종료 안내
+          </div>
+          <div class="desc">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam labore ut voluptatibus nulla eos minus assumenda recusandae asperiores soluta, doloribus magni, hic praesentium deleniti alias?
+          </div>
+        </div>
+        <div class="img">
+          <img src="img/graphic01.png">
+        </div>
+      </div>
+    </article>
+  </section>
+  <script>
+    $('.title').click(function(){
+      $(this).siblings('.title').removeClass('active');
+      $(this).addClass('active');
+      $(this).siblings('.desc').stop().slideUp();
+      $(this).next().stop().slideDown();
+
+      var dataImage = $(this).attr('data-image');
+      $('.img img').attr('src', dataImage);
+    })
+  </script>
+</body>
+</html>

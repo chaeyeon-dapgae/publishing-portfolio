@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+section {
+  width: 800px;
+}
+.heading h1 {
+  margin: 0;
+}
+.heading input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+}
+.heading input::placeholder {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+}
+.heading input:focus::placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+.btn {
+  list-style: none;
+  padding: 0;
+  overflow: hidden;
+  margin: 0 10px;
+  margin-top: 40px;
+}
+.btn li {
+  float: left;
+  background-color: #f4f4f4;
+  width: 180px;
+  text-align: center;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+  cursor: pointer;
+  border-top: 4px solid transparent;
+}
+.btn li:last-child {
+  border-right: none;
+}
+.btn li:hover,
+.btn li.active {
+  background-color: #fff;
+  border-top: 4px solid crimson;
+}
+.tabs {
+  background-color: #fff;
+}
+.tabs > div {
+  display: none;
+  padding: 40px;
+  padding-top: 80px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.tabs div.active {
+  display: block;
+}
+.tabs div h3 {
+  margin: 0;
+  text-align: center;
+}
+@media (max-width: 1199px) {
+  body {
+    height: auto;
+    padding: 50px 0;
+  }
+  section {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .btn li {
+    width: 33%;
+  }
+}
+@media (max-width: 767px) {
+  section {
+    width: 90%;
+  }
+  .btn {
+    margin: 0;
+    margin-top: 40px;
+  }
+  .btn li {
+    width: 50%;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+  .btn li:nth-child(even) {
+    border-right: 0;
+  }
+}

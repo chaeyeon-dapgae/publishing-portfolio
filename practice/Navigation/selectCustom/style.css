@@ -1,0 +1,129 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.6em;
+  background-color: #fff;
+  color: #222;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+footer {
+  background-color: #373943;
+  color: #fff;
+  height: auto;
+  padding: 50px;
+  font-size: 1.5em;
+}
+.footer-inner {
+  width: 1280px;
+  margin: 0 auto;
+}
+.footer-inner:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.copyright {
+  float: left;
+}
+.family {
+  float: right;
+  padding-top: 10px;
+}
+.policy {
+  margin-bottom: 20px;
+}
+.policy a:hover{
+  text-decoration: underline;
+  font-weight: 500;
+}
+.policy a:first-child {
+  color: yellowgreen;
+}
+footer em {
+  font-style: normal;
+  color: #555;
+  font-weight: 900;
+  margin: 7px;
+}
+.dropdown {
+  width: 200px;
+  border: 1px solid #555;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+}
+.title {
+  color: #fff;
+}
+.title:after {
+  content: '\f107';
+  font-family: fontawesome;
+  position: absolute;
+  right: 5px;
+  transition: 0.35s;
+}
+.title.active:after {
+  transform: rotateX(180deg);
+}
+.sub-navi {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+.sub-navi li {}
+.sub-navi li a {
+  display: block;
+  padding: 5px;
+  background-color: #aaa;
+  border-bottom: 1px solid #ccc;
+}
+.sub-navi li a:hover {
+  background-color: #555;
+}
+@media (max-width: 1199px) {
+  footer {
+    width: 100vw;
+    padding: 0;
+  }
+  .footer-inner {
+    width: 90%;
+    padding: 50px 0;
+  }
+  .copyright {
+    float: none;
+  }
+  .family {
+    float: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .policy a {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .policy em {
+    display: none;
+  }
+  .copyright .info span {
+    line-height: 1.4em;
+  }
+}

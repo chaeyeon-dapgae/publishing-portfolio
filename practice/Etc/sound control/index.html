@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사운드 재생 제어하기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="frame">
+    <h1>자바스크립트 사운드 재생 제어하기</h1>
+    <div class="btns">
+      <button id="btn-play-pause" onclick="playPause();">Play<i class="fa fa-play"></i></button>
+      <button onclick="stop()">Stop<i class="fa fa-stop"></i></button>
+    </div>
+    <audio src="img/relaxing-145038.mp3" id="audio"></audio>
+    <div class="audio-status">
+      <span style="height: 40%"></span>
+      <span style="height: 100%"></span>
+      <span style="height: 70%"></span>
+      <span style="height: 40%"></span>
+    </div>
+  </div>
+  <script>
+    var audio = document.getElementById('audio'),
+        btnPlayPause=document.getElementById('btn-play-pause'),
+        chkStatus = 0;
+        audioStatus = document.querySelector('.audio-status')
+    function playPause() {
+      if (chkStatus == 0) {
+        chkStatus = 1;
+        audio.play()
+        btnPlayPause.innerHTML = 'Pause<i class="fa fa-pause"></i>';
+        audioStatus.classList.add('active');
+      }
+      else {
+        chkStatus = 0;
+        audio.pause();
+        btnPlayPause.innerHTML = 'Play<i class="fa fa-play"></i>';
+        audioStatus.classList.remove('active');
+      }
+    }
+    function stop() {
+      playPause();
+      audio.pause();
+      audio.currentTime = 0;
+      btnPlayPause.innerHTML = 'Play<i class="fa fa-play"></i>';
+      audioStatus.classList.remove('active');
+    }
+  </script>
+</body>
+</html>

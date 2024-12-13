@@ -1,0 +1,167 @@
+/* Common */
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.tabContents {
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+}
+.content {
+  position: relative;
+}
+.imgGroup {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+.imgView {
+  display: flex;
+  width: 300%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.5s;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  width: calc(100% / 3);
+}
+input[type="radio"] {
+  display: none;
+}
+.btn {
+  text-align: center;
+  margin-top: 20px;
+}
+label {
+  display: inline-block;
+  border: 1px solid #000;
+  width: 13px;
+  height: 13px;
+  margin: 0 13px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #fff;
+  transition: 0.35s;
+}
+/* ##### cnt01 ##### */
+input[id="cnt01-btn1"]:checked ~ .btn label[for="cnt01-btn1"],
+input[id="cnt01-btn2"]:checked ~ .btn label[for="cnt01-btn2"],
+input[id="cnt01-btn3"]:checked ~ .btn label[for="cnt01-btn3"] {
+  background-color: salmon;
+  border: 1px solid transparent;
+}
+.cnt01 .imgView {
+  display: block;
+}
+.cnt01 .imgView img {
+  display: none;
+}
+input[id="cnt01-btn1"]:checked ~ .tab01 img:nth-child(1),
+input[id="cnt01-btn2"]:checked ~ .tab01 img:nth-child(2),
+input[id="cnt01-btn3"]:checked ~ .tab01 img:nth-child(3) {
+  display: block;
+}
+/* ##### cnt02 ##### */
+input[id="cnt02-btn1"]:checked ~ .btn label[for="cnt02-btn1"],
+input[id="cnt02-btn2"]:checked ~ .btn label[for="cnt02-btn2"],
+input[id="cnt02-btn3"]:checked ~ .btn label[for="cnt02-btn3"] {
+  background-color: salmon;
+  border: 1px solid transparent;
+}
+input[id="cnt02-btn1"]:checked ~ .tab02 .imgView {
+  left: 0;
+}
+input[id="cnt02-btn2"]:checked ~ .tab02 .imgView {
+  left: -100%
+}
+input[id="cnt02-btn3"]:checked ~ .tab02 .imgView {
+  left: -200%;
+}
+/* ##### cnt03 ##### */
+input[id="cnt03-btn1"]:checked ~ .btn label[for="cnt03-btn1"],
+input[id="cnt03-btn2"]:checked ~ .btn label[for="cnt03-btn2"],
+input[id="cnt03-btn3"]:checked ~ .btn label[for="cnt03-btn3"] {
+  background-color: salmon;
+  border: 1px solid transparent;
+}
+.cnt03 img {
+  width: 100%;
+}
+input[id="cnt03-btn1"]:checked ~ .tab03 .imgView {
+  left: 0;
+}
+input[id="cnt03-btn2"]:checked ~ .tab03 .imgView {
+  left: -100%
+}
+input[id="cnt03-btn3"]:checked ~ .tab03 .imgView {
+  left: -200%;
+}
+.cnt03 .imgView > div {
+  position: relative;
+  width: calc(100% / 3);
+}
+.cnt03 img {
+  width: 100%;
+}
+.cnt03 .sale {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #000;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  left: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: -50px;
+  opacity: 0;
+  transition: 0.2s;
+  transition-delay: 0.5s;
+}
+.sale h5 {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+}
+.sale span {
+  text-transform: uppercase;
+}
+input[id="cnt03-btn1"]:checked ~ .tab03 .imgView > div:nth-child(1) .sale,
+input[id="cnt03-btn2"]:checked ~ .tab03 .imgView > div:nth-child(2) .sale,
+input[id="cnt03-btn3"]:checked ~ .tab03 .imgView > div:nth-child(3) .sale {
+  opacity: 1;
+  top: 5px;
+}
+@media (max-width: 1199px) {
+  body {
+    height: auto;
+    padding: 50px 0;
+  }
+  .tabContents {
+    width: 80%;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .tabContents {
+    width: 90%;
+    gap: 20px;
+  }
+  .content {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,76 @@
+* {box-sizing: border-box;}
+body {
+  margin: 0;
+  background-image: url(img/snow-photo.jpg);
+  background: url('img/snow-photo.jpg') no-repeat center center fixed;
+}
+body:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.search {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.search h1 {
+  color: #fff;
+  text-align: center;
+  font-weight: normal;
+}
+.search input[type=text] {
+  width: 300px;
+  padding: 15px;
+  border: none;
+  margin-right: -6px;
+  border-radius: 40px 0 0 40px;
+  outline: none;
+  padding-left: 30px;
+}
+.search input[type=submit] {
+  width: 100px;
+  padding: 15px;
+  border: none;
+  border-radius: 0 40px 40px 0;
+  cursor: pointer;
+  background-color: orange;
+  color: #fff;
+  font-weight: 500;
+  outline: none;
+}
+.search input[type=submit]:hover {
+  background-color: darkgoldenrod;
+}
+.search input[type=text]::placeholder {
+  font-style: italic;
+}
+.search input[type=text]:focus::placeholder {
+  visibility: hidden;
+  opacity: 0;
+}
+@media (max-width: 800px) {
+  .search {
+    width: 90%;
+    text-align: center;
+    position: absolute;
+  }
+  .search input[type=text] {
+    border-radius: 40px;
+    width: 100%;
+    margin-top: 50px;
+    margin: 0;
+  }
+  .search input[type=submit] {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

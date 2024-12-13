@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6em;
+  color: #fff;
+  background-color: #363062;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+section.login {
+  background-color: #435585;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.login .logo {
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), inset 2px 2px 3px rgba(255, 255, 255, 0.3);
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-transform: uppercase;
+  font-size: 56px;
+  font-weight: bold;
+  margin: 0 auto;
+  color: #fff;
+}
+.login h1 {
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 50px 0;
+  margin-bottom: 20px;
+  line-height: 1.4em;
+}
+.input-field {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+.input-field input {
+  width: 100%;
+  height: 30px;
+  padding: 5px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #f5e8c7;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+}
+.input-field span {
+  position: absolute;
+  text-transform: uppercase;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.5s;
+  z-index: -1;
+}
+.input-field input:focus + span,
+.input-field input:valid + span {
+  top: 0;
+  transform: translateY(-50%) scale(0.7);
+  left: 0;
+}
+.input-field span.warning {
+  color: crimson;
+  animation: warning 0.3s ease-in-out 2;
+}
+.button-field input {
+  background-color: yellowgreen;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.add-info {
+  overflow: hidden;
+  margin-top: 20px;
+  color: #ccc;
+}
+.add-info label {
+  float: left;
+  cursor: pointer;
+}
+.add-info a {
+  color: #ccc;
+  float: right;
+}
+.add-info a:hover {
+  text-decoration: underline;
+}
+@keyframes warning {
+  0% {
+    transform: translateX(-5px);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-5px);
+  }
+}
+@media (max-width: 767px) {
+  section.login {
+    width: 70%;
+  }
+}
+@media (max-width: 350px) {
+  .add-info label {
+    float: none;
+  }
+  .add-info a {
+    float: none;
+    display: block;
+  }
+}

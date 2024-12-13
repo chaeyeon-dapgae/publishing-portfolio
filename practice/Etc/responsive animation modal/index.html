@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형 애니메이션 모달 만들기(HTML+CSS+JQUERY)</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+  <div class="modal">
+    <div class="modal-content">
+      <div class="photo"></div>
+      <div class="desc">
+        <div class="desc-header">
+          <h2>지금 다양한 헤택을 받아보세요.</h2>
+          <button class="btn-close">&times;</button>
+        </div>
+        <div class="desc-content">
+          <input type="email" placeholder="이메일 주소를 입력하세요.">
+          <button>뉴스레터 구독하기</button>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda delectus alias illum, vero quo quia corporis atque enim fuga explicabo blanditiis consequuntur, molestias molestiae quisquam iure.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay"></div>
+  <button class="btn-open">뉴스레터 구독하기</button>
+  <script>
+    $('.btn-open').click(function(){
+      $('.modal, .overlay').addClass('active')
+    })
+    $('.overlay, .btn-close').click(function(){
+      $('.modal, .overlay').removeClass('active');
+    })
+  </script>
+</body>
+</html>

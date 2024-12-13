@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D-day Counter</title>
+  <link rel="stylesheet" href="./stylec.css">
+  <script src="script.js" defer></script>
+  <!-- defer 속성은 스크립트 읽어오는 동시에 태그 생성 -->
+  <!-- defer 속성 없으면 body태그 안에 작성 -->
+</head>
+<body>
+  <div class="d-day-counter">
+    <h1>D-Day-Counter</h1>
+    <div class="remaining-time">
+      <h3 id="d-day-container">D-day를 입력해주세요</h3>
+    </div>
+    <div id="target-selector" class="target-time">
+      <input type="number" id="target-year-input" class="target-input" size="5"> -
+      <input type="number" id="target-month-input" class="target-input" size="5"> -
+      <input type="number" id="target-date-input" class="target-input" size="5">
+    </div>
+    <div class="btn-group">
+      <button onclick="starter ()" id="start-btn">카운트다운 시작</button>
+      <button onclick="reset ()">Reset</button>
+    </div>
+  </div>
+</body>
+</html>

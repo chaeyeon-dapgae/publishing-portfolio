@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Form Modal with Flexbox</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <div class="logo">chaeyeon</div>
+          <div class="search">
+            <i class="open-search xi-search"></i>
+          </div>
+        </nav>
+      </header>
+      <section>
+        <h1>Section Content</h1>
+      </section>
+    </div>
+    <div class="modal-search">
+      <i class="close-search xi-close-thin"></i>
+      <div class="search">
+        <div class="field">
+          <input type="search" placeholder="What are you looking for?" />
+          <input type="button" value="Search" />
+        </div>
+        <p class="hash-tag">#유채연 #신입퍼블리셔 #사명감 #포기하지 않는</p>
+      </div>
+    </div>
+    <script>
+      $(".search .field input[type=search]")
+        .focus(function () {
+          $(this).parent().next().css("display", "block");
+        })
+        .blur(function () {
+          $(this).parent().next().css("display", "none");
+        });
+      $(".open-search").click(function () {
+        $(".modal-search").addClass("active");
+      });
+      $(".close-search").click(function () {
+        $(".modal-search").removeClass("active");
+      });
+    </script>
+  </body>
+</html>

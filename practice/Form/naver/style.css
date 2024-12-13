@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  font-size: 14px;
+  background-color: #f5f6f7;
+  color: #222;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+/* Reset CSS */
+input, select {
+  cursor: pointer;
+}
+/* Member Sign in */
+.member {
+  width: 430px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+.member .logo {
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+}
+.field b {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.field span {
+  display: block;
+}
+.member input:not(input[type=radio]), .field select {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #dadada;
+}
+.member input:not(input[type=radio]):focus, .field select:focus {
+  border: 1px solid #03C75A;
+}
+.placehold-text {
+  display: block;
+  position: relative;
+}
+.placehold-text:before {
+  content: '@naver.com';
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  pointer-events: none;
+}
+.field.birth div {
+  display: flex;
+  gap: 10px;
+}
+.field.gender div {
+  border: 1px solid #dadada;
+  background-color: #fff;
+  padding: 15px 5px;
+  margin-bottom: 20px;
+}
+.field.tel-number div {
+  display: flex;
+  gap: 10px;
+}
+.field.tel-number div input[type=tel] {
+  flex: 2;
+}
+.field.tel-number div input[type=button]{
+  flex: 1;
+}
+.member input[type=button],
+.member input[type=submit] {
+  background-color: #2db400;
+  color: #fff;
+  border: 1px solid transparent;
+}
+.member-footer {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+}
+.member-footer a:hover {
+  text-decoration: underline;
+}
+/* Custom Select & Custom Number*/
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+@media (max-width: 767px) {
+  .container {
+    padding-top: 50px;
+  }
+  .member {
+    width: 90%;
+  }
+}

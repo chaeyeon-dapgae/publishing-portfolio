@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>커스텀 체크박스 로그인 폼</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form class="login">
+      <h1>Login Accounts</h1>
+      <span class="field">User Email</span>
+      <input type="email" placeholder="Type your Email">
+      <span class="field">User Password</span>
+      <input type="password" placeholder="Type your Password">
+      <div class="save-info">
+        <input type="checkbox" id="chk">
+        <label for="chk">Save your email</label>
+        <a href="#none">forgot password?</a>
+      </div>
+      <div class="event-info">
+        Would you like to receive event emails?
+        <div class="custom-checkbox">
+          <input type="radio" name="event" id="event-yes">
+          <label for="event-yes">Yes</label>
+          <input type="radio" name="event" id="event-no">
+          <label for="event-no">No</label>
+        </div>
+      </div>
+      <input type="button" value="login">
+      <div class="sns-info">
+        Or Login using
+        <div class="sns">
+          <a href="#none"><i class="xi-google"></i></a>
+          <a href="#none"><i class="xi-facebook"></i></a>
+          <a href="#none"><i class="xi-naver"></i></a>
+          <a href="#none"><i class="xi-kakaotalk"></i></a>
+        </div>
+      </div>
+      <div class="signup-info">
+        <span>Have not account yet?</span>
+        <a href="#none">Sign up</a>
+      </div>
+    </form>
+  </body>
+</html>
