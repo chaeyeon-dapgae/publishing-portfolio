@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: azure;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+h1 {
+  margin: 0;
+}
+.todo-container {
+  min-width: 90%;
+}
+
+#todo-input {
+  background-color: lightyellow;
+  border: none;
+  display: block;
+  font-size: 2rem;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  width: 100%;
+}
+#todo-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: lightyellow;
+  border: none;
+  margin-top: 25px;
+}
+
+#todo-list li {
+  padding: 5px 10px;
+  border-top: 1px solid #eee;
+  font-size: 1.5rem;
+  user-select: none; /*유저가 드래그 불가능*/
+  line-height: 2rem;
+}
+#todo-list li:first-child {
+  border-top: none;
+}
+#todo-list li button {
+  border: 1px solid #000;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 10px;
+  border: 2px solid #aaa;
+  cursor: pointer;
+}
+#todo-list li button:active {
+  border: 2px solid #ddd;
+}
+.complete {
+  color: #999;
+  text-decoration: line-through;
+}
+/* 전체 삭제 버튼 */
+.delete-btn-wrapper {
+  margin-top: 1rem;
+}
+.delete-btn-wrapper button {
+  font-weight: bold;
+  background-color: antiquewhite;
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+  border: none;
+}
